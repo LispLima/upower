@@ -1,18 +1,14 @@
-upower: UPower bindings for common lisp
-=======================================
+# UPower: UPower bindings for common lisp
 
-A module for use with STUMPWM is provided.
+On top of the bindings we provide a StumpWM module to interact with UPower.
 
-Module setup
-------------
+## Module setup
 
-Copy or symlink the stumpwm/upower-manager.lisp over to your stumpwm
-plugins directory and add the following code to your .stumpwmrc file
+Copy or symlink the stumpwm/upower-manager.lisp over to your stumpwm plugins
+directory and add the following code to your .stumpwmrc file
 
-``` Lisp
-;;Load the module and dependences
-(ql:quickload "upower")
-(load-module "upower-manager")
+```lisp
+(load-module "upower/stumpwm-upower")
 
 ;;Handy commands
 (stumpwm:defcommand launch-upower-manager () ()
@@ -32,3 +28,7 @@ plugins directory and add the following code to your .stumpwmrc file
 ```
 
 Provides a battery formatter (%b).
+
+## References
+
+https://upower.freedesktop.org/docs/ref-dbus.html
